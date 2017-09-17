@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relAbove"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button_background"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:paddingLeft="5dp" 
+            android:paddingRight="5dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/rel_bottom_bg_image"
+        android:layout_below="@+id/relAbove"
+        android:layout_marginTop="2dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/img_Main"
+                android:layout_width="match_parent"
+                android:textSize="30sp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+
+        android:id="@+id/rel_bottom_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/rel_bottom_image"
+        android:background="@drawable/button_background"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="4"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/rel_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back40"
+                android:contentDescription="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                 android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:background="@drawable/list_button_40" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_rate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/btn_feed"
+                 android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:src="@drawable/png" />
+        </RelativeLayout>
+
+
+        <!--android:id="@+id/btn_feed"-->
+
+       <!-- android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"-->
+
+        <RelativeLayout
+            android:id="@+id/rel_forward"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                  android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:background="@drawable/forward40"
+                android:id="@+id/imageView" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_bottom_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+</RelativeLayout>
